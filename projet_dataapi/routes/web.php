@@ -19,7 +19,15 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('accueil');
 });
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('modale');
+=======
+Route::get('/musee', function () {
+    return view('musee');
+});
+Route::get('/departement', function () {
+    return view('departement');
+>>>>>>> master
 });
