@@ -11,6 +11,15 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('template');
+});
+
+Route::get('/', function () {
+    return view('accueil');
+});
+
+Route::get('/', function () {
+    return view('modale');
 });

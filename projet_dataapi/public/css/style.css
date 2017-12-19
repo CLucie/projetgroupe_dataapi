@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+body
+    {
+         width: 100%;
+         background-image:url("../img/projetgroupe_dataapi.jpg");
+         background-size: cover;
+         background-repeat: no-repeat;
+    }
+
+h1
+    {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-top: 45px;
+         background-color: white;
+         opacity: 0.7;
+    }
+
+.btn-group
+    {
+         margin-left: 1100px;
+         margin-top: 45px;
+    } 
+
+.modal
+    {
+       
+        background-color: silver;
+        width: 100%;
+    }
+
+
+footer
+    {
+         text-align: center;
+         font-size: 17px;
+         background-color: white;
+         opacity: 0.7;
+    }
