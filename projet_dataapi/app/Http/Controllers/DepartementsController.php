@@ -14,8 +14,8 @@ class DepartementsController extends Controller
      */
     public function index()
     {
-        $titis = Departement::all();
-        return view('testmap', compact('titis'));
+        $zone = Departement::all();
+        return view('testmap', compact('zone'));
     }
 
     /**

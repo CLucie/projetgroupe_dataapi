@@ -19,9 +19,13 @@
     </style> -->
   </head>
   <body>
-@foreach ($titis as $titi)
-{{$titi->fields->latlon[1]}}
-@endforeach
+
+<!-- @foreach ($zone as $zone)
+{{$zone->properties->latlon[1]}}
+@endforeach -->
+
+{{$zone->properties->title}}
+
 
     <!-- <div id="map"></div>
     <script>
