@@ -52,7 +52,7 @@ class MuseesController extends Controller
     public function show($uid)
     {
         $carte = Musee::get($uid);
-        
+
     }
 
     /**

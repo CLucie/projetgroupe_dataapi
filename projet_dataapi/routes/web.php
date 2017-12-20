@@ -13,4 +13,3 @@
 
 
 Route::get('/', 'MuseeController@index');
-
