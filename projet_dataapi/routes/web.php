@@ -16,8 +16,3 @@
 // });
 
 Route::get('/','MuseesController@index');
-
-Route::get('/departement', function () {
-    return view('departement');
-});
-
