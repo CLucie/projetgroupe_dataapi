@@ -20,11 +20,19 @@
   </head>
   <body>
 
-<!-- @foreach ($zone as $zone)
-{{$zone->properties->latlon[1]}}
-@endforeach -->
+@foreach ($zone as $zone)
 
-{{$zone->properties->title}}
+{{$zone->properties->region}}
+
+@endforeach
+
+
+<!-- {{$zone->properties->latlon[0]}} {{$zone->properties->latlon[1]}} -->
+
+
+
+
+
 
 
     <!-- <div id="map"></div>

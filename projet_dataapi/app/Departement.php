@@ -10,7 +10,3 @@ class Departement
 	return(json_decode($reponse)->features);
     }
 }
-
-
-//api musées
-	

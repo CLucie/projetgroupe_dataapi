@@ -16,6 +16,7 @@ class DepartementsController extends Controller
     {
         $zone = Departement::all();
         return view('testmap', compact('zone'));
+
     }
 
     /**
