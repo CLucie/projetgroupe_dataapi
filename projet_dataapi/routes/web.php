@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'DepartementsController@index');
+
+Route::get('/', 'MuseeController@index');
+
