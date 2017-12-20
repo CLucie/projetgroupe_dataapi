@@ -17,11 +17,7 @@ class MuseesController extends Controller
         
            $cartes = Musee::all();
 
-<<<<<<< HEAD
-           return view('sophie' , compact('cartes'));        
-=======
-           return view('accueil' , compact('cartes'));        
->>>>>>> master
+           return view('accueil' , compact('cartes'));  
         
     }
 
