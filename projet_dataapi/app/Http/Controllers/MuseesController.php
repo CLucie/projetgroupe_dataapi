@@ -49,9 +49,10 @@ class MuseesController extends Controller
      * @param  \App\Musee  $musee
      * @return \Illuminate\Http\Response
      */
-    public function show(Musee $musee)
+    public function show($uid)
     {
-        //
+        $carte = Musee::get($uid);
+        
     }
 
     /**
