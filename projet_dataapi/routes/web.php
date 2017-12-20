@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('accueil');
-});
 
 
-Route::get('/musees','MuseesController@index');
+
+Route::get('/','MuseesController@index');
 

@@ -16,21 +16,23 @@ class MuseesController extends Controller
     {
         
            $cartes = Musee::all();
-
-           return view('sophie' , compact('cartes'));  
+           return view('accueil' , compact('cartes'));  
         
     }
 
+   
+        
+    }
     /**
      * Display the specified resource.
      *
      * @param  \App\Musee  $musee
      * @return \Illuminate\Http\Response
      */
-    public function show($uid)
-    {
-        $carte = Musee::get($uid);
+    // public function show($uid)
+    // {
+    //     $carte = Musee::get($uid);
 
-    }
+    // }
 
-}
+// }

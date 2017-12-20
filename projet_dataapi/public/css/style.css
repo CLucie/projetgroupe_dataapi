@@ -20,6 +20,14 @@ h1
 
     }
 
+#map{
+    width: 50%;
+    height: 350px;
+    background-color: grey;
+    margin: 7% 0 0 5%;
+    border-radius: 5%;
+}
+
 .btn-group
     {
          margin-left: 1100px;
@@ -40,4 +48,5 @@ footer
          font-size: 17px;
          background-color: white;
          opacity: 0.7;
+        
     }
