@@ -40,7 +40,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
-          center: new google.maps.LatLng({{$titis[0]->properties->latlon[0]}}, {{$titis[0]->properties->latlon[1]}}),
+          center: new google.maps.LatLng({{$cartes[0]->properties->latlon[0]}}, {{$cartes[0]->properties->latlon[1]}}),
           mapTypeId: 'roadmap'
         });
         var customLabel = {
@@ -61,8 +61,8 @@
 
         var features = [
 
-        @foreach ($titis as $titi)
-          {position: new google.maps.LatLng({{$titi->properties->latlon[0]}}, {{$titi->properties->latlon[1]}}),
+        @foreach ($cartes as $carte)
+          {position: new google.maps.LatLng({{$carte->properties->latlon[0]}}, {{$carte->properties->latlon[1]}}),
             type: 'info'},
         @endforeach 
         ];
