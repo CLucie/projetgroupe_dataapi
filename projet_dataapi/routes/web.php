@@ -12,4 +12,7 @@
 */
 
 
-Route::get('/', 'MuseeController@index');
+
+
+Route::get('/','MuseesController@index');
+

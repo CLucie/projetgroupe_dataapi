@@ -7,7 +7,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
     <title>projetgroupe_dataapi</title>
 </head>
 <body>  
@@ -20,7 +20,7 @@
     <section>
     @yield('main')
     </section>
-    <footer class="fixed-bottom mb-4" >
+    <footer class="fixed-bottom mb-5" >
         <h3>©-2017.SOPHIE.LUCIE.FREDERIC</h3>
     </footer>
    
