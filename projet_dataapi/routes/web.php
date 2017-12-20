@@ -11,12 +11,10 @@
 |
 */
 
-<<<<<<< HEAD
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
 Route::get('/','MuseesController@index');
-=======
-Route::get('/', 'MuseeController@index');
->>>>>>> master
+
