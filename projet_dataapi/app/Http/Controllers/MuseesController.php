@@ -17,7 +17,7 @@ class MuseesController extends Controller
         
            $cartes = Musee::all();
 
-           return view('sophie' , compact('cartes'));        
+           return view('accueil' , compact('cartes'));        
         
     }
 
@@ -52,7 +52,7 @@ class MuseesController extends Controller
     public function show($uid)
     {
         $carte = Musee::get($uid);
-        
+
     }
 
     /**

@@ -11,12 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('accueil');
-});
-Route::get('/musee', function () {
-    return view('musee');
-});
-Route::get('/departement', function () {
-    return view('departement');
-});
+Route::get('/', 'MuseeController@index');
