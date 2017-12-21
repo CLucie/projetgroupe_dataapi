@@ -14,10 +14,14 @@ class MuseesController extends Controller
      */
     public function index()
     {
-        
-           $cartes = Musee::all();
-           return view('accueil' , compact('cartes'));  
-        
+        $cartes = Musee::all();
+        return view('accueil' , compact('cartes'));
+    }
+
+    public function departement(Request $request)
+    {
+        $cartes = Musee::departement($request->nom);
+        return view ('accueil' , compact('cartes'));
     }
 
    
@@ -35,4 +39,4 @@ class MuseesController extends Controller
 
     // }
 
-// }
+

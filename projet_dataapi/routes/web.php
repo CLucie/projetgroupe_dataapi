@@ -15,4 +15,4 @@
 
 
 Route::get('/','MuseesController@index');
-
+Route::get('/{nom}','MuseesController@departement')->name('departement');

@@ -3,7 +3,7 @@
 <div class="btn-group float-right mr-4">
 <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
         <option selected>DEPARTEMENTS</option>
-        <option value="1">AIN</option>
+        <option href="{{route('departement',array('nom'=>'Ain'))}}" value="1">AIN</option>
         <option value="2">ALLIER</option>
         <option value="3">ARDECHE</option>
       </select>
@@ -17,11 +17,11 @@
 
       var map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: new google.maps.LatLng({{$cartes[0]->properties->latlon[0]}}, {{$cartes[0]->properties->latlon[1]}}),
-          mapTypeId: 'roadmap'
-        });
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 7,
+        center: new google.maps.LatLng(45.561141, 4.578258),
+        mapTypeId: 'roadmap'
+      });
 
         var contentString = '<div id="content">'+
                 '<div>'+
@@ -63,16 +63,14 @@
         // boucle pour lire les latitudes et les longitudes pour afficher les markers
 
         var features = [];
-
-        @foreach ($cartes as $carte)
-          features.push(
-            {
-                'uid': '{{$carte->properties->uid}}',
-                'marker': {position: new google.maps.LatLng({{$carte->properties->latlon[0]}}, {{$carte->properties->latlon[1]}} ), type: 'info'}
-            }
-
+      @foreach ($cartes as $carte)
+        features.push(
+          {
+            'uid': '{{$carte->fields->uid}}',
+            'marker': {position: new google.maps.LatLng({{$carte->fields->latlon[0]}}, {{$carte->fields->latlon[1]}} ), type: 'info'}
+          }
         );
-        @endforeach 
+      @endforeach
 
 
 
