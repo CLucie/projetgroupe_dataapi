@@ -7,7 +7,7 @@
     var map;
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 7,
+        zoom: 9,
         center: new google.maps.LatLng(45.561141, 4.578258),
         mapTypeId: 'roadmap'
       });
@@ -49,11 +49,11 @@
     };
     // boucle pour lire les latitudes et les longitudes pour afficher les markers
     var features = [];
-      @foreach ($cartes as $carte)
+      @foreach ($cartedepartements as $cartedepartement)
         features.push(
           {
-            'uid': '{{$carte->fields->uid}}',
-            'marker': {position: new google.maps.LatLng({{$carte->fields->latlon[0]}}, {{$carte->fields->latlon[1]}} ), type: 'info'}
+            'uid': '{{$cartedepartement->fields->uid}}',
+            'marker': {position: new google.maps.LatLng({{$cartedepartement->fields->latlon[0]}}, {{$cartedepartement->fields->latlon[1]}} ), type: 'info'}
           }
         );
       @endforeach 
@@ -83,25 +83,26 @@
   </script>
 
 </p>
-
-<?php 
-$departements = array("Ain","Allier","Ardèche","Cantal","Drôme","Haute-Loire","Haute-Savoie","Isère","Loire","Métropole de Lyon","Puy-de-Dôme","Rhône","Savoie");
-?>
-
-
-<div class="col-3">
+<form class="col-3">
   <div class="btn-group float-right mr-4">
-    <select onChange="location.href=''+this.options[this.selectedIndex].value" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
       <option selected>DEPARTEMENTS</option>
-     
-      <?php 
-      foreach ($departements as $departement) {
-       echo "<option value='/".$departement."'>".$departement."</option>" ;
-      }
-      ?>
+      <option value="1">AIN</option>
+      <option value="2">ALLIER</option>
+      <option value="3">ARDECHE</option>
+      <option value="4">CANTAL</option>
+      <option value="5">DRÔME</option>
+      <option value="6">ISERE</option>
+      <option value="7">LOIRE</option>
+      <option value="8">HAUTE-LOIRE</option>
+      <option value="9">PUY-DE-DÔME</option>
+      <option value="10">RHÔNE</option>
+      <option value="11">METROPOLE DE LYON</option>
+      <option value="12">SAVOIE</option>
+      <option value="13">HAUTE-SAVOIE</option>
     </select>
   </div>
-</div>
+</form>
 
 <!-- button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button-->
 
