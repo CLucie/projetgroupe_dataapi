@@ -84,22 +84,14 @@
 
 </p>
 
-<?php 
-$departements = array("Ain","Allier","Ardèche","Cantal","Drôme","Haute-Loire","Haute-Savoie","Isère","Loire","Métropole de Lyon","Puy-de-Dôme","Rhône","Savoie");
-?>
-
-
 <div class="col-3">
   <div class="btn-group float-right mr-4">
-    <select onChange="location.href=''+this.options[this.selectedIndex].value" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-      <option selected>DEPARTEMENTS</option>
-     
-      <?php 
-      foreach ($departements as $departement) {
-       echo "<option value='/".$departement."'>".$departement."</option>" ;
-      }
-      ?>
-    </select>
+    <select onChange="location.href=this.options[this.selectedIndex].value" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+     <option selected>DEPARTEMENTS</option>    
+     @foreach ($departements as $departement)
+      <option value="{{route('departement', array('nom'=>$departement))}}">{{$departement}}</option>
+     @endforeach      
+     </select>
   </div>
 </div>
 
