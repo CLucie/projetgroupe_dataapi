@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class MuseesController extends Controller
 {
+
+    private $departements;
+
+    public function __construct() {
+        $this->departements = array("Ain","Allier","Ardèche","Cantal","Drôme","Haute-Loire","Haute-Savoie","Isère","Loire","Métropole de Lyon","Puy-de-Dôme","Rhône","Savoie");
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,78 +21,16 @@ class MuseesController extends Controller
      */
     public function index()
     {
-        
-           $cartes = Musee::all();
-
-           return view('sophie' , compact('cartes'));        
-        
+        $cartes = Musee::all();
+        $departements = $this->departements;
+        return view('accueil' , compact('cartes', 'departements'));
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function departement(Request $request)
     {
-        //
+        $cartes = Musee::departement($request->nom);
+        $departements = $this->departements;
+        return view('accueil' , compact('cartes', 'departements'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Musee  $musee
-     * @return \Illuminate\Http\Response
-     */
-    public function show($uid)
-    {
-        $carte = Musee::get($uid);
-        
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Musee  $musee
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Musee $musee)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Musee  $musee
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Musee $musee)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Musee  $musee
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Musee $musee)
-    {
-        //
-    }
 }
